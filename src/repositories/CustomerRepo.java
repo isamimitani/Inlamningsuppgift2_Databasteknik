@@ -21,7 +21,7 @@ public class CustomerRepo {
     
     public static List<Customer> getAllCustomers(){
         
-        String sql = "select * from customers";
+        String sql = "select * from customers order by firstname asc";
         List<Customer> customerlist = new ArrayList<>();
         
         try(Connection conn = Repository.getConnection();
@@ -50,7 +50,7 @@ public class CustomerRepo {
     
     public static Map<Integer, Customer> getAllCustomersAsMap(){
         
-        String sql = "select * from customers";
+        String sql = "select * from customers order by firstname";
         Map<Integer, Customer> customerMap = new HashMap<>();
         
         try(Connection conn = Repository.getConnection();

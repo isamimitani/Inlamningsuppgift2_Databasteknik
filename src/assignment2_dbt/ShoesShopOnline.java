@@ -47,6 +47,7 @@ public class ShoesShopOnline {
                 System.out.println("You have ordered following items.");
                 controller.showOrderedItems(order);
                 System.out.println("Thank you for your purchase!");
+                System.exit(0);
             } else {
                 continue;
             }           
